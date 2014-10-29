@@ -1,54 +1,14 @@
 doctype html
-html(lang='en')
+head
+  link(rel="stylesheet", href="/css/main.css")
+  - if (locals.pageTitle)
+    title!= locals.pageTitle + ' | ' + locals.blogTitle
+  - else
+    title= locals.blogTitle
+  link(rel="alternate", type="application/rss+xml", href= locals.rssUrl, title= locals.blogTitle)
+  meta(name="description", content= blogBio)
+  meta(charset="utf-8")
+  meta(name="viewport", content="width=device-width,initial-scale=1.0")
 
-  //-   __               _   
-  //-  /  )             | |       *** &yet, since 2009 - THE PLACE WHERE DREAMS COME TRUE  ***
-  //- | (_) _ _   _  ___| |_      *** AND WHERE THEY ALSO INVOLVE LEAPING DEER, ETC. *** 
-  //-  > _ / | | | |/ _ \ __|   
-  //- | (_) /| |_| |  __/ |_      Giant hugs to whoever's reading the source :)
-  //-  \___/\ \__, |\___|\__|     You should totally follow us: twitter.com/andyet  
-  //-         __/ |             
-  //-        |___/
-
-  head
-    - if (locals.pageTitle)
-      title!= locals.pageTitle + ' | ' + locals.blogTitle
-    - else
-      title= locals.blogTitle
-
-    meta(charset='utf-8')
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-    meta(http-equiv='X-UA-Compatible', content='IE=edge')
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-    meta(name='author', content= blogAuthor)
-    meta(name='description', content= blogBio)
-
-    link(rel='icon', type='image/png', href='/img/ampersand.png')
-
-    link(rel="stylesheet", type="text/css", href="//cloud.typography.com/7773252/719244/css/fonts.css")
-    link(rel='stylesheet', href='/css/normalize.min.css')
-    link(rel='stylesheet', href='/css/main.min.css')
-
-    link(rel='alternate', type='application/rss+xml', href= locals.rssUrl, title= locals.blogTitle)
-
+block body
   body(id= locals.bodyId)
-
-    .wrapper.page-blog
-
-      include includes/header
-
-      .cf
-
-        .content(role='main')
-          block content
-
-        aside(role='complementary')
-          include includes/products
-          include includes/nav-archive
-
-      include includes/footer
-
-  script(src='/js/highlight.min.js')
-  script.
-    hljs.initHighlightingOnLoad();
-    hljs.configure({classPrefix: '' });

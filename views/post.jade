@@ -1,11 +1,14 @@
 extends layout
 
-block content
-  article.post(class=type)      
-    h2.postTitle= locals.postData.title         
-    .meta
-      small=locals.postData.formattedDate
-      small 
-        | ● posted by   
-        span #{locals.postData.author}
-    .postContent!= locals.postData.postBody
+block body
+  body(id= locals.bodyId)
+    include header
+    article(class=type)
+      .row
+        a.permalink(href="")= locals.postData.formattedDate       
+        .postTitle
+          h1(style="margin-top: 0;")= locals.postData.title         
+        .large-2.hide-for-small.columns
+      .row
+        .postContent!= locals.postData.postBody
+    include footer

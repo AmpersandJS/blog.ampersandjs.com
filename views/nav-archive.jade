@@ -1,0 +1,9 @@
+nav
+  each months, year in locals.archives
+    li
+      a(href="/#{year}") #{year}
+    if (locals.archiveYear == year)
+      ul
+        each month in months
+          li
+            a(href='/#{year}/#{month}') #{month}
