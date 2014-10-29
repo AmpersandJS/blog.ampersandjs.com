@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  article.post(class=type)      
+    h2.postTitle= locals.postData.title         
+    .meta
+      small=locals.postData.formattedDate
+      small 
+        | ● posted by   
+        span #{locals.postData.author}
+    .postContent!= locals.postData.postBody

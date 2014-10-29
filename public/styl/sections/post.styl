@@ -1,0 +1,46 @@
+/*--------------------------------------------------------------------
+*
+* POST
+*
+--------------------------------------------------------------------*/
+
+img, video, iframe
+  margin: 0 auto
+  max-width: 100%
+
+.post
+
+  &:not(:last-of-type)
+    padding-bottom: 40px
+    margin-bottom: @padding-bottom
+    border-bottom: 1px solid $gray-lighter
+
+  &:last-of-type
+    margin: 0
+
+  h1, h2:not(.postTitle), h3, h4, h5
+    font-weight: normal
+
+  .postTitle
+    margin-bottom: 0
+
+    a
+      color: black
+
+      &:hover
+        color: $gray-dark
+
+  .meta
+
+    small
+      display: inline-block
+      color: $gray
+      font-family: $font-gotham
+
+      &:last-of-type
+        padding-left: 5px
+        margin-left: 3px
+
+#pagination
+  margin-top: 80px
+  text-align: center

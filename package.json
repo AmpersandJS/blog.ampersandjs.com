@@ -1,0 +1,40 @@
+{
+  "name": "blog.ampersandjs.com",
+  "version": "1.0.0",
+  "description": "Server for the ampersandjs blog",
+  "main": "server.js",
+  "scripts": {
+    "lint": "jshint ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:AmpersandJS/blog.ampersandjs.com.git"
+  },
+  "keywords": [
+    "ampersandjs",
+    "blog",
+    "bumble"
+  ],
+  "author": "Michael Garvin <gar@danger.computer>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AmpersandJS/blog.ampersandjs.com/issues"
+  },
+  "homepage": "https://github.com/AmpersandJS/blog.ampersandjs.com",
+  "dependencies": {
+    "bumble": "^2.1.1",
+    "electricfence": "^1.1.2",
+    "getconfig": "^0.3.0",
+    "good": "^3.1.0",
+    "hapi": "^7.1.1",
+    "jade": "^1.7.0"
+  },
+  "private": true,
+  "devDependencies": {
+    "jshint": "^2.5.7",
+    "precommit-hook": "^1.0.7"
+  },
+  "precommit": [
+    "lint"
+  ]
+}

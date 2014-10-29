@@ -1,0 +1,19 @@
+{
+    "port": 3000,
+    "host": "localhost",
+    "bumble": {
+        "blogTitle": "AmpersandJS",
+        "blogSubtitle": "<&",
+        "blogAuthor": "ampersandjs",
+        "blogAuthorEmail": "howdy@andyet.com",
+        "blogBio": "The AmpersandJS Blog",
+        "siteUrl": "http://localhost:3000",
+        "postDir": "../blog-posts",
+        "maxPosts": 10
+    },
+    "good": {},
+    "electricfence": {
+        "path": "public",
+        "url": "/"
+    }
+}

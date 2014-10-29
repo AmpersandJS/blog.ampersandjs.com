@@ -1,0 +1,33 @@
+/*--------------------------------------------------------------------
+*
+* ARCHIVES
+*
+--------------------------------------------------------------------*/
+
+.post-archives
+  
+  ul
+    margin: 0
+
+  li
+    padding: 5px 0
+    list-style: none
+
+    &:not(:last-of-type)
+      border-bottom: 1px solid $gray-lighter
+
+@media $mobile-devices
+
+  aside
+    margin-top: 30px
+    padding: @margin-top 0
+    border-top: 1px solid $gray-lighter
+    border-bottom: @border-top
+    text-align: center
+
+  .post-archives 
+    li
+      padding: 0
+
+      &:not(:last-of-type)
+        border: none

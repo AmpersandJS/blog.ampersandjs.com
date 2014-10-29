@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  each post in locals.postData
+    article.post(class=post.type)      
+      h2.postTitle
+        a.permalink(href= post.url)= post.title         
+      .meta
+        small: a.permalink(href= post.url)=post.formattedDate
+        small 
+          | ● posted by   
+          span #{post.author}
+      .postContent!= post.postBody
+
+  .pagination-wrapper       
+    include includes/pagination

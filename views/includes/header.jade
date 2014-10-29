@@ -1,0 +1,20 @@
+.sticker-sticky-wrapper(id='')
+  header.cf(role='banner')
+    a.logo(href='http://andyet.com')
+      h1 &yet
+
+    nav.pull-right.cf(role='navigation')
+
+      label(for='menu-toggle') Menu
+      input(id='menu-toggle', type='checkbox')
+
+      ul.unstyled
+
+        li: a(href='http://andyet.com/consulting') Consulting
+        li: a(href='http://andyet.com/training') Training
+        li: a(href='http://andyet.com/about') About
+        li: a(href='http://labs.andyet.com') Labs
+        li: a(href='http://community.andyet.com') Community
+        li: a.last-child(href='http://blog.andyet.com') Blog
+
+h1.blogTitle= locals.blogTitle
